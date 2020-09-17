@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test File</title>
+    <style>
+        .myclass2 {
+            /* highest prioroty than any css selector */
+            color: red !important;
+        }
+        #myid {
+            /* higher priority than class selector */
+            color: green;
+        }
+        .myclass {
+            /* high prioroty than element selector */
+            color: skyblue;
+
+            /* we can use negative values for margin */
+            margin-top: -25px;
+        }
+        h1 {
+            /* removes the element from DOM */
+            /* display: none; */
+            /* Just toggle the visibility, element still exist in DOM */
+            /* visibility: hidden; */
+            color: blue;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 id="myid" class="myclass myclass2">This is a Heading</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam autem animi molestias est, neque sint eum voluptatum ut illo mollitia.</p>
+</body>
+</html>
