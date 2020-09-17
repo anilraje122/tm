@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float & Align</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4em;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        .box {
+            background: #ccc;
+            border: 1px solid #000;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .box p {
+            /* Text Align */
+            text-align: left;
+            text-align: right;
+            text-align: center;
+            text-align: justify;
+        }
+
+        #box-2 {
+            float: left;
+            width: 68%;
+        }
+
+        #box-3 {
+            float: right;
+            width: 30%;
+        }
+
+        .clr {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box-1" class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laborum optio dolorem enim? Quo mollitia assumenda sit vitae placeat accusantium?</p>
+        </div>
+        <div id="box-2" class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laborum optio dolorem enim? Quo mollitia assumenda sit vitae placeat accusantium?</p>
+        </div>
+        <div id="box-3" class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laborum optio dolorem enim? Quo mollitia assumenda sit vitae placeat accusantium?</p>
+        </div>
+        <div class="clr"></div>
+        <div id="box-4" class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laborum optio dolorem enim? Quo mollitia assumenda sit vitae placeat accusantium?</p>
+        </div>
+    </div>
+</body>
+</html>
