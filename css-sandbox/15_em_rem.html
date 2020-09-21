@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em & rem Units</title>
+    <style>
+
+        /* em and rem units are mostly used for font sizes */
+
+        /* em units - depends on parent element */
+        #box-1 {
+            font-size: 20px;
+        }
+
+        #box-1 p {
+            font-size: 1.5em;
+            padding: 1em;
+        }
+
+        #box-1 ul {
+            font-size: 1.2em;
+        }
+
+        /* rem units - depends on root HTML element*/
+        html {
+            /* This is the HTML root element and default font size 16px = 1rem */
+            font-size: 16px;
+        }
+
+        #box-2 h3 {
+            /* root HTML element font size is 16px by default. So 2rem = 2x16px = 32px*/
+            font-size: 2rem;
+        }
+
+        #box-2 p {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="box-1">
+        <h3>Box 1 - Example of "em"</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, a. Facere ipsum quas nam laudantium vel maiores praesentium officiis voluptas.</p>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="box-2">
+        <h3>Box 2 - Example of "rem"</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, a. Facere ipsum quas nam laudantium vel maiores praesentium officiis voluptas.</p>
+    </div>
+</body>
+</html>
