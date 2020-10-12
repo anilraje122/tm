@@ -9,6 +9,12 @@ const taskInput = document.querySelector('#task');
 loadEventListeners = () => {
     // Add task event
     form.addEventListener('submit', addTask);
+    // Remove task event
+    taskList.addEventListener('click', removeTask);
+    // Clear tasks
+    clearbtn.addEventListener('click', clearTasks);
+    // Filter tasks
+    filter.addEventListener('keyup', filterTasks);
 }
 
 // Add new task
@@ -37,8 +43,36 @@ addTask = (e) => {
     // Clear input
     taskInput.value = '';
 
-
     e.preventDefault();   
+}
+
+// Remove task
+removeTask = (e) => {
+    if(e.target.parentElement.classList.contains('delete-item')) {
+        if(confirm('Are you sure?')){
+            e.target.parentElement.parentElement.remove();
+        }
+    }
+}
+
+// Clear tasks
+clearTasks = (e) => {
+    while(taskList.firstChild) {
+        taskList.removeChild(taskList.firstChild);
+    }
+}
+
+// Filter tasks
+filterTasks = (e) => {
+    const text = e.target.value.toLowerCase();
+    document.querySelectorAll('.collection-item').forEach((task) => {
+        const item = task.firstChild.textContent.toLowerCase();
+        if(item.indexOf(text) !== -1) {
+            task.style.display = 'block';
+        } else {
+            task.style.display = 'none';
+        }
+    })
 }
 
 loadEventListeners();
