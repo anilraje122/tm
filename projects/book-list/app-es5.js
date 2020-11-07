@@ -49,6 +49,7 @@ UI.prototype.showAlert = function (msg, className) {
 UI.prototype.deleteBook = function (target) {
   target.parentElement.parentElement.remove();
 };
+
 /* Event listeners */
 
 // Event listener for add book
