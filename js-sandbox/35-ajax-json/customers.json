@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Anil Raj",
+    "company": "123 Designs",
+    "phone": "91 34343124"
+  },
+  {
+    "id": 2,
+    "name": "Vinil",
+    "company": "Hello Designs",
+    "phone": "91 345345345"
+  },
+  {
+    "id": 3,
+    "name": "Dinil",
+    "company": "World Designs",
+    "phone": "91 97886556"
+  }
+]
